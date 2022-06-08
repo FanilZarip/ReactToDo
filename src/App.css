@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+div {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	letter-spacing: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 12px;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+nav,
+span,
+section,
+ul,
+li,
+input,
+form {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.container {
+	max-width: 476px;
+    background-color: #fff;
+}
+
+/* .container{
+    width: 364px;
+    height: 582px;
+} */
+
+.d-flex {
+    display: flex;
+}
+
+.todo__wrapper {
+    max-width: 460px;
+    margin: auto;
+    padding-bottom: 2px;
+}
+
+.todo__priority_Title {
+    font-family: 'Roboto';
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.todo__priority_Title_high {
+    padding-top: 20px;
+}
+
+.todo__form {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.todo__taskText_input {
+    font-family: 'Roboto';
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 46px;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #989898;
+    border-radius: 6px;
+}
+
+.button {
+    background: none;
+    position: absolute;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-right: 13px;
+}
+
+.todo__List {
+    margin-top: 8px;
+    margin-bottom: 6px;
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-bottom: 10px;
+    align-items: flex-start;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #989898;
+    border-radius: 6px;
+}
+
+.todo__List_checked {
+    background-color: #F4F4F4;
+}
+
+.todo__task__name {
+    font-size: 18px;
+    color: #202020;
+    background-color: transparent;
+
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 42px;
+    border: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.todo__task__name__unselect, .todo__task__name__unselect:active, .todo__task__name__unselect:focus, .todo__task__name__unselect:focus-visible {
+    outline: none;
+}
+
+
+/* для элемента input c type="checkbox" */
+.todoCheckBox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+  /* для элемента label, связанного с .custom-checkbox */
+  .todoCheckBox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+
+.todoCheckBox>span::before {
+    content: '';
+    height: 21px;
+    width: 21px;
+    border: none;
+    background-image: url(./img/unchecked.svg);
+    background-repeat: no-repeat;
+}
+
+ 
+  /* стили для чекбокса, находящегося в состоянии checked */
+.todoCheckBox>input:checked+span::before {
+    border: none;
+    background-image: url(./img/checked.svg);
+    background-repeat: no-repeat;
+}
+
+.task__delete_button {
+    padding-top: 0;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background-image: url(./img/delete.svg);
+    background-repeat: no-repeat;
+}
